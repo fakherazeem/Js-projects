@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #021268;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .converter-card {
+            background-color: #2742b9;
+            box-shadow: 0 10px 25px rgba(245, 243, 243, 0.1);
+            color: #ffffff;
+        }
+
+        .input-label {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .input-field {
+            border: 1px solid #a8dadc;
+            transition: all 0.2s ease-in-out;
+            color: #333;
+            height: 50px;
+            width: 300px;
+            padding-right: 12px;
+        }
+
+        .input-field:focus {
+            border-color: #1f8a7e;
+            box-shadow: 0 0 0 2px rgba(31, 138, 126, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="converter-card p-8 sm:p-10 rounded-xl w-full max-w-lg mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-8 tracking-wider">
+            Temperature Converter
+        </h1>
+        <div class="flex items-center justify-between mb-6">
+            <label for="celsius" class="input-label">Celsius:</label>
+            <input type="number" id="celsius" name="celsius"  onchange="convertTemp(event)" placeholder="0.00"
+                class="input-field text-right">
+        </div>
+        <div class="flex items-center justify-between mb-6">
+            <label for="fahrenheit" class="input-label">Fahrenheit:</label>
+            <input type="number" id="fahrenheit" name="fahrenheit"  onchange="convertTemp(event)" placeholder="32.00"
+                class="input-field text-right">
+        </div>
+        <div class="flex items-center justify-between">
+            <label for="kelvin" class="input-label">Kelvin:</label>
+            <input type="number" id="kelvin" name="kelvin"  onchange="convertTemp(event)" placeholder="273.15"
+                class="input-field text-right">
+        </div>
+    </div>
+
+    <script>
+        function convertTemp(event) {
+            const enteredValue = parseFloat(event.target.value);
+            switch (event.target.name) {
+                case "celsius":
+                    kelvin.value = (enteredValue + 273.15);
+                    fahrenheit.value = (enteredValue * 1.8 + 32);
+                    break;
+                case "fahrenheit":
+                    const celsiusFromF = (enteredValue - 32) / 1.8;
+                    celsius.value = celsiusFromF;
+                    kelvin.value = (celsiusFromF + 273.15);
+                    break;
+                case "kelvin":
+                    const celsiusFromK = (enteredValue - 273.15);
+                    celsius.value = celsiusFromK;
+                    fahrenheit.value = (celsiusFromK * 1.8 + 32);
+                    break;
+                default:
+                    break
+            }
+        }
+    </script>
+
+</body>
+
+</html>

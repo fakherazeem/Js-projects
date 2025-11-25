@@ -1,0 +1,92 @@
+   body {
+            font-family: 'Inter', sans-serif;
+            background: #eef1f5; /* Very light, soft gray */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #495057;
+        }
+
+        .age-calculator-card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: #1a202c;
+            font-weight: 700;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .custom-label {
+            font-weight: 600;
+            color: #495057;
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        /* --- Form Elements --- */
+        .form-control {
+            /* Basic Bootstrap class used, but custom CSS applies look */
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            padding: 10px 12px;
+            height: auto;
+            transition: border-color 0.2s ease;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: none; /* Removing Bootstrap's default shadow for cleaner look */
+        }
+
+        /* --- Button --- */
+        .custom-btn-calculate {
+            background-color: #1abc9c; /* Custom primary color (Turquoise) */
+            border: none;
+            border-radius: 6px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 25px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            width: 100%;
+        }
+
+        .custom-btn-calculate:hover {
+            background-color: #16a085;
+        }
+
+        #result {
+            margin-top: 25px;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            color: #09571b;
+            min-height: 48px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #result span {
+            color: #1abc9c; 
+            font-size: 1.4rem;
+        }

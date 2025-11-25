@@ -1,0 +1,29 @@
+ :root {
+            --color-bg-salmon: #f5b7af; 
+            --color-card-pink: #f8e1e7; 
+            font-family: 'Caveat', cursive; 
+        }
+
+        body {
+            background-color: var(--color-bg-salmon);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1, p, span, textarea {
+            font-family: 'Caveat', cursive;
+        }
+
+        #textBox {
+            resize: none;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .card-container {
+            width: 90%;
+            max-width: 450px;
+        }

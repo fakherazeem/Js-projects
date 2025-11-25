@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
+    font-family: "Courier New", monospace;
+}
+
+.card {
+    background: pink;
+    padding: 30px;
+    border-radius: 20px;
+    width: 480px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    font-size: 22px;
+    border-radius: 10px;
+    border: 2px solid black;
+    outline: none;
+}
+
+.input-box button {
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.generate {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 18px;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}

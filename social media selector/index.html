@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Social Menu (Bootstrap)</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="glass-card">
+        <div class="accordion" id="socialMenu">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="fab fa-twitter me-2"></i> Twitter
+                    </button>
+                </h2>
+
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#socialMenu">
+                    <div class="accordion-body p-0">
+                        <ul class="list-unstyled mb-0">
+                            <li class="social-link">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </li>
+                            <li class="social-link">
+                                <i class="fab fa-youtube"></i> YouTube
+                            </li>
+                            <li class="social-link">
+                                <i class="fab fa-twitter"></i> Twitter
+                            </li>
+                            <li class="social-link">
+                                <i class="fab fa-linkedin-in"></i> Linkedin
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
