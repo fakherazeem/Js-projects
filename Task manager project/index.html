@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>My Task Manager</h1>
+            <p id="current-date"></p>
+        </header>
+
+        <main>
+            <section class="task-form-section card">
+                <h2>Add New Task</h2>
+                <form id="task-form">
+                    <div class="form-group">
+                        <label for="title">Title (Required):</label>
+                        <input type="text" id="title" required placeholder="e.g., Study" maxlength="100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description (Optional):</label>
+                        <textarea id="description" rows="3" placeholder="Write here..."></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="priority">Priority:</label>
+                            <select id="priority">
+                                <option value="Low">Low </option>
+                                <option value="Medium" selected>Medium </option>
+                                <option value="High">High </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="due-date">Due Date (Optional):</label>
+                            <input type="date" id="due-date">
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submit-button">Add Task</button>
+                </form>
+            </section>
+
+            <section class="controls-section card">
+                <h3>Task Controls</h3>
+                <div class="controls-row">
+                    <div class="form-group search-group">
+                        <label for="search-input">Search:</label>
+                        <input type="text" id="search-input" placeholder="Search by title or description..."
+                            aria-label="Search tasks">
+                    </div>
+
+                    <div class="form-group filter-group">
+                        <label for="status-filter">Filter by Status:</label>
+                        <select id="status-filter">
+                            <option value="all">All Tasks</option>
+                            <option value="active">Not Completed</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <section class="task-list-section">
+                <h2>Tasks</h2>
+                <div id="task-list-container">
+                    <p class="no-tasks-message">Input data to see Tasks</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Built by Fakher Azeem, 2025</p>
+        </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
