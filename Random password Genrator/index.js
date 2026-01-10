@@ -16,4 +16,6 @@ document.getElementById("generateBtn").addEventListener("click", function () {
 document.getElementById("copyBtn").addEventListener("click", function () {
   const passwordInput = document.getElementById("password");
   navigator.clipboard.writeText(passwordInput.value);
+    alert("Password copied to clipboard!");
+
 });
